@@ -18,7 +18,7 @@
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  ENTER  | | ENTER |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  ENTER | | ENTER  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //                     | ALT  | GUI  | LOWER|  SPACE |  | BSPC  | RAISE| BSPC  | GUI   |
 
             label = "Base";
@@ -38,16 +38,16 @@
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  /    |  {    |  }   |   \   |   ?   |
             // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  =    |  (    |  )   |   '   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  |    |  [    |  ]   |   }   |  "|"  |
+            // |       |     |     |      |      |      |        |  |       |      |  "|"  |  [    |  ]   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
             label = "Lower";
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans     &trans                   &trans                    &trans                    &trans            &trans
-&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                            &kp F7     &kp SV_SLASH             &kp SV_LEFT_BRACE         &kp SV_RIGHT_BRACE        &kp SV_BACKSLASH  &kp SV_QMARK
-&kp trans    &kp EXCL      &kp SV_AT     &kp HASH      &kp DOLLAR    &kp PRCNT                         &kp CARET  &kp SV_EQUAL             &kp SV_LEFT_PARENTHESIS   &kp SV_RIGHT_PARENTHESIS  &kp SV_SQT        &kp TILDE
-&trans       &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans     &kp SV_PIPE              &kp SV_LEFT_BRACKET       &kp SV_RIGHT_BRACKET      &kp RBRC          &kp PIPE
-                                         &trans        &trans        &trans        &trans      &trans  &trans     &trans                   &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans     &trans        &trans                    &trans                    &trans            &trans
+&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                            &kp F7     &kp SV_SLASH  &kp SV_LEFT_BRACE         &kp SV_RIGHT_BRACE        &kp SV_BACKSLASH  &kp SV_QMARK
+&trans       &kp EXCL      &kp SV_AT     &kp HASH      &kp DOLLAR    &kp PRCNT                         &kp CARET  &kp SV_EQUAL  &kp SV_LEFT_PARENTHESIS   &kp SV_RIGHT_PARENTHESIS  &kp SV_SQT        &kp TILDE
+&trans       &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans     &kp SV_PIPE   &kp SV_LEFT_BRACKET       &kp SV_RIGHT_BRACKET      &kp RBRC          &kp PIPE
+                                         &trans        &trans        &trans        &trans      &trans  &trans     &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
