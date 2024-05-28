@@ -36,18 +36,18 @@
         lower_layer {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  /    |  {    |  }   |   \   |   ?   |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  =    |  (    |  )   |   '   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  "|"  |  [    |  ]   |   }   |  "|"  |
+            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |  *    |  ?   |   '   |   ?   |
+            // |       |  +  |  =  |  (   |  )   |  "   |                   |  :   |   ]   |  [    |  }   |   {   |       |
+            // |       |  <  |  |  |   -  |  >   |   \  |        |  |       |      |   _   |  /    |  ½   |   }   |   ;   |
             //                     |      |      |      |        |  |       |      |       |       |
 
             label = "Lower";
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &trans     &trans        &trans                    &trans                    &trans            &trans
-&kp F1       &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                               &kp F7     &kp SV_SLASH  &kp SV_LEFT_BRACE         &kp SV_RIGHT_BRACE        &kp SV_BACKSLASH  &kp SV_QMARK
-&trans       &kp EXCL      &kp SV_AT     &kp HASH      &kp DOLLAR    &kp PRCNT                            &kp LT  &kp SV_EQUAL  &kp SV_LEFT_PARENTHESIS   &kp SV_RIGHT_PARENTHESIS  &kp SV_SQT        &kp TILDE
-&trans       &trans        &trans        &trans        &trans        &trans        &trans      &trans     &trans     &kp SV_PIPE   &kp SV_LEFT_BRACKET       &kp SV_RIGHT_BRACKET      &kp RBRC          &kp PIPE
-                                         &trans        &trans        &trans        &trans      &kp BSPC   &trans     &trans        &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &trans        &trans        &trans          &trans         &trans       &trans
+&kp F1       &kp SV_EXCL   &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp SV_PRCNT                         &kp SV_CARET  &kp SV_AMPS   &kp SV_STAR     &kp SV_QMARK   &kp SV_SQT   &kp SV_QMARK
+&trans       &kp SV_PLUS   &kp SV_EQUAL  &kp SV_LPAR   &kp SV_RPAR   &kp SV_DQT                           &kp SV_COLON  &kp SV_RBKT   &kp SV_LBKT     &kp SV_LBRC    &kp SV_RBRC  &kp SV_TILDE
+&trans       &kp SV_LT     &kp SV_PIPE   &kp SV_MINUS  &kp SV_GT     &kp SV_BSLH   &trans      &trans     &trans        &kp SV_UNDER   &kp SV_SLASH   &kp SV_TILDE   &kp SV_SEMI  &kp PIPE
+                                         &trans        &trans        &trans        &trans      &kp BSPC   &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
